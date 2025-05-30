@@ -13,6 +13,7 @@ export interface IStudent {
   birth_date: string;
   phone: string;
   email: string;
+  group: string;
 }
 
 export interface StudentData extends AuthData {

@@ -1,6 +1,7 @@
 export interface IAuth {
+  _id?: string;
   uid: string;
-  password: string;
+  password?: string;
   role: "teacher" | "student";
 }
 

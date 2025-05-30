@@ -1,8 +1,13 @@
-import type { StudentData } from "@/interfaces/student.interface";
-import type { TeacherData } from "@/interfaces/teacher.interface";
+import type { IAuth } from "@/interfaces/auth.interface";
+import type { IStudent } from "@/interfaces/student.interface";
+import type { ITeacher } from "@/interfaces/teacher.interface";
 import { create } from "zustand";
 
-type AuthUser = TeacherData | StudentData | null | undefined;
+type AuthUser =
+  | (IAuth & { teacher: ITeacher })
+  | (IAuth & { student: IStudent })
+  | null
+  | undefined;
 
 interface AuthState {
   auth: AuthUser;
